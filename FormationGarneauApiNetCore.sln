@@ -5,7 +5,11 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormationGarneauApiNetCore", "FormationGarneauApiNetCore\FormationGarneauApiNetCore.csproj", "{20569078-07E8-4A24-B3B1-099FCE517AC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{DB4E29A7-3094-4FF7-841B-656AF370EF0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{DB4E29A7-3094-4FF7-841B-656AF370EF0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDeDonneeSql", "BaseDeDonneeSql\BaseDeDonneeSql.csproj", "{AA58ECEB-F20E-491C-89AB-45E8D7E9B079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BdMaria", "BdMaria\BdMaria.csproj", "{105E864E-790D-4D70-A79B-83C8CA4710C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{DB4E29A7-3094-4FF7-841B-656AF370EF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB4E29A7-3094-4FF7-841B-656AF370EF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB4E29A7-3094-4FF7-841B-656AF370EF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA58ECEB-F20E-491C-89AB-45E8D7E9B079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA58ECEB-F20E-491C-89AB-45E8D7E9B079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA58ECEB-F20E-491C-89AB-45E8D7E9B079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA58ECEB-F20E-491C-89AB-45E8D7E9B079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105E864E-790D-4D70-A79B-83C8CA4710C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105E864E-790D-4D70-A79B-83C8CA4710C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105E864E-790D-4D70-A79B-83C8CA4710C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105E864E-790D-4D70-A79B-83C8CA4710C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

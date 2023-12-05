@@ -15,8 +15,9 @@ namespace Service
     {
         public static void AddService(this IServiceCollection services)
         {
-            services.AddScoped<IFlightPrice, FlightServiceCore>();
+            services.AddScoped<IFlightPrice, FlightPriceService>();
             services.AddScoped<ILotterieService, LotterieService>();
+           
         }
     }
 }

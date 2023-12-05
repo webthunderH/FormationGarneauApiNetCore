@@ -19,6 +19,7 @@ namespace FormationGarneauApiNetCore.Controllers
         [HttpGet(Name = "GetFlightPrice")]
         public List<FlightPrice> GetFlightPrice(string depart, string arrivee)
         {
+            
             return FlightPriceService.GetFlightPrices(depart,arrivee);
         }
 

@@ -10,5 +10,6 @@ namespace Service.FlightPriceNamespace.Interfaces
     public interface IFlightPrice
     {
         List<FlightPrice> GetFlightPrices(string depart, string arrival);
+
     }
 }

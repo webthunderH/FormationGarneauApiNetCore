@@ -1,4 +1,5 @@
-﻿using Service.FlightPriceNamespace.Interfaces;
+﻿using BaseDeDonneeSql.Lotterie;
+using Service.FlightPriceNamespace.Interfaces;
 using Service.Lotterie.Model;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,8 @@ namespace Service.Lotterie.Services
 {
     internal class LotterieService : ILotterieService
     {
+        private ILotterieRepository repository;
+
         public List<BilletPossible> ObtenirListeBilletPossible() { 
             var billet = new List<BilletPossible>();
 
@@ -26,6 +29,7 @@ namespace Service.Lotterie.Services
                 double montantGagner = (double)randomX.Next(500, 500000000);
                 billet.Add(new BilletPossible(numeroGagnant, pourcentage, "beauTemps", montantGagner,10));
             }
+            
             return billet;
         }
     }
