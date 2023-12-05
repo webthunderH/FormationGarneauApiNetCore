@@ -34,7 +34,6 @@ namespace BaseDeDonneeSql
             };
             context.FlightPrices.AddRange(fligthPrince);
             context.SaveChanges();
-
         }
     }
 }

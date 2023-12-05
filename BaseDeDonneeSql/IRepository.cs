@@ -12,6 +12,7 @@ namespace BaseDeDonneeSql
         void Delete(TEntity entityToDelete);
         Task<List<TEntity>> Get();
         Task<TEntity> GetBy(Expression<Func<TEntity, bool>> exp);
+        Task<List<TEntity>> GetListBy(Expression<Func<TEntity, bool>> exp);
         void Insert(TEntity entity);
         void Update(TEntity entityToUpdate);
     }

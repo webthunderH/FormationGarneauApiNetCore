@@ -36,8 +36,11 @@ namespace BaseDeDonneeSql
         {
             return DbSet.FirstOrDefaultAsync(exp);
         }
+        public Task<List<TEntity>> GetListBy(Expression<Func<TEntity, bool>> exp)
+        {
+            return DbSet.Where(exp).ToListAsync();
+        }
 
-       
         public void Insert(TEntity entity)
         {
             context.Add(entity);
