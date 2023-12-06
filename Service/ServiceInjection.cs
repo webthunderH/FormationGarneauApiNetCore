@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Service.FlightPriceNamespace.Interfaces;
 using Service.FlightPriceNamespace.Services;
 using Service.Lotterie.Services;
+using Service.Ricardo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace Service
         {
             services.AddScoped<IFlightPrice, FlightPriceService>();
             services.AddScoped<ILotterieService, LotterieService>();
+            services.AddScoped<IRicardoService, RicardoService>();
            
         }
     }

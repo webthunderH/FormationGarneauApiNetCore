@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaseDeDonneeSql.Lotterie
+namespace Service.Ricardo.Models
 {
-    public interface ILotterieRepository : IRepository<BilletLotterieEntity>
+    public class Photo
     {
-
+        public string url { get; set; }
     }
 }

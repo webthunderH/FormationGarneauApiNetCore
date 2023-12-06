@@ -1,4 +1,5 @@
 ﻿using BaseDeDonneeSql.FlightPriceNameSpace;
+using BaseDeDonneeSql.Lotterie;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,33 @@ namespace BaseDeDonneeSql
                 new FlightPrice { Price = 220.0f, Arrival = "London", Depart = "Sydney" },
                 new FlightPrice { Price = 200.0f, Arrival = "London", Depart = "Seoul" },
             };
+
+            var listNumero = new BouleNumero[56];
+            for (int i = 0; i < 56; i++)
+            {
+                listNumero[i]=new BouleNumero { Numero = i + 1 };
+            }
+            BilletLotterieEntity[] billets = new BilletLotterieEntity[20];
+
+            // Remplir le tableau avec des entités ayant des valeurs aléatoires
+            for (int i = 0; i < billets.Length; i++)
+            {
+                billets[i] = new BilletLotterieEntity
+                {                   
+                    PourcentageReussite = Outil.GetRandomDouble(),
+                    TempsQuIlFaisait = Outil.GetRandomWeather(),
+                    MontantRemporter = Outil.GetRandomUInt(),
+                    NombreDeGagnant = Outil.GetRandomUInt(),
+                    Numéros = new List<BouleNumero>(){
+                        listNumero[Outil.GetRandomUIntListNumero()], listNumero[Outil.GetRandomUIntListNumero()],
+                        listNumero[Outil.GetRandomUIntListNumero()], listNumero[Outil.GetRandomUIntListNumero()],
+                        listNumero[Outil.GetRandomUIntListNumero()], listNumero[Outil.GetRandomUIntListNumero()]
+                    }
+                };
+            }
+            context.ListeBoulesNumero.AddRange(listNumero);
             context.FlightPrices.AddRange(fligthPrince);
+            context.BilletLotteries.AddRange(billets);
             context.SaveChanges();
         }
     }

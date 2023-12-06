@@ -8,6 +8,10 @@ namespace Service.Lotterie.Model
 {
     public class BilletPossible
     {
+        public BilletPossible()
+        {
+            
+        }
         public BilletPossible(List<uint> Numéros, double pourcentageReussite, string tempsQuIlFaisait, double montantRemporter, uint nombreDeGagnant)
         {
             this.Numéros = Numéros;
