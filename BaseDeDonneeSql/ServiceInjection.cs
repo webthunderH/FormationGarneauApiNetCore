@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseDeDonneeSql.Lotterie;
 
 namespace BaseDeDonneeSql
 {
@@ -18,6 +19,7 @@ namespace BaseDeDonneeSql
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IFlightPriceRepository, FlightPriceRepository>();
+            services.AddScoped<ILotterieRepository, LotterieRepository>();
         }
     }
 }

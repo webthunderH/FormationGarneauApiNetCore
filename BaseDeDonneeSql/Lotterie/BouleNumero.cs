@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BaseDeDonneeSql.Lotterie
 {
-    public class BilletLotterie
+    public class BouleNumero
     {
+        public int Id { get; set; }
+        public int Numero { get; set; }
     }
 }

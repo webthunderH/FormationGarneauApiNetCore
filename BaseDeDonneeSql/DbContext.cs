@@ -1,4 +1,5 @@
 ﻿using BaseDeDonneeSql.FlightPriceNameSpace;
+using BaseDeDonneeSql.Lotterie;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 
@@ -15,7 +16,8 @@ namespace BaseDeDonneeSql
         {
         }
         public Microsoft.EntityFrameworkCore.DbSet<FlightPrice> FlightPrices { get; set; }
-
+        public Microsoft.EntityFrameworkCore.DbSet<BouleNumero> ListeBoulesNumero { get; set; }
+        public Microsoft.EntityFrameworkCore.DbSet<BilletLotterieEntity> BilletLotteries { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
