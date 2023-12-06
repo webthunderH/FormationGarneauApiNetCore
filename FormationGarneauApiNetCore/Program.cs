@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+using Microsoft.OpenApi.Models;
 using Service;
 
 namespace FormationGarneauApiNetCore
@@ -10,7 +12,7 @@ namespace FormationGarneauApiNetCore
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
             builder.Services.AddService();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

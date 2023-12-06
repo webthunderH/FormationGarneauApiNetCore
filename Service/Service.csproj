@@ -10,4 +10,16 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="RicardoRecipes\" />
+    <None Remove="RicardoRecipes\Model\" />
+    <None Remove="RicardoRecipes\Services\" />
+    <None Remove="RicardoRecipes\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RicardoRecipes\" />
+    <Folder Include="RicardoRecipes\Model\" />
+    <Folder Include="RicardoRecipes\Services\" />
+    <Folder Include="RicardoRecipes\Interfaces\" />
+  </ItemGroup>
 </Project>
